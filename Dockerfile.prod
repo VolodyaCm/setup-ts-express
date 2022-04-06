@@ -1,0 +1,9 @@
+FROM node:16-alpine as APP_BUILD
+WORKDIR /app
+COPY "package.json" .
+RUN npm install
+COPY . .
+RUN npm run check-all
+RUN npm run build
+EXPOSE ${APP_EXTERNAL_PORT}
+CMD node /app/build/index.js

@@ -1,0 +1,6 @@
+dev.env
+prod.env
+/node_modules
+/dist
+/build
+.tsbuildinfo
