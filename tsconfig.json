@@ -10,7 +10,10 @@
     "baseUrl": ".",
     "paths": {
       "@": ["./*"],
-      "*": ["node_modules/*"]
+      "@/config/*": ["./src/config/*"],
+      "@/gql/*": ["./src/graphql/*"],
+      "@/gql/types/*": ["src/graphql/types/*"],
+      "@/gql/resolvers/*": ["./src/graphql/resolvers/*"],
     }
   },
   "include": ["src/**/*"]

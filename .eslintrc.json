@@ -10,7 +10,13 @@
   "settings": {
     "import/resolver": {
       "alias": {
-        "map": [["@", "./"]]
+        "map": [
+          ["@", "./"],
+          ["@/config", "./src/config"],
+          ["@/gql", "./src/graphql"],
+          ["@/gql/types", "./src/graphql/types"],
+          ["@/gql/resolvers", "./src/graphql/resolvers"]
+        ]
       }
     }
   }
