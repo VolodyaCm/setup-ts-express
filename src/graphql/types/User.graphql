@@ -5,25 +5,50 @@ scalar JSON
 type User {
   id: UUID!
   name: String!
-  password: String!
   email: String!
   active: Boolean!
   createdAt: Datetime!
   updatedAt: Datetime!
 }
 
+input GetUsersInput {
+  size: Int
+  offset: Int
+}
+
+input SigninInput {
+  email: String!
+  password: String!
+}
+
 type Query {
-  getUsers: [User!]
+  getUsers(input: GetUsersInput): [User!]
+  signin(input: SigninInput): User!
+  getUser(id: String!): User!
+  getMe: User!
 }
 
 input CreateUserInput {
-  username: String!
+  name: String!
   password: String!
   email: String!
+  privilege: String
+}
+
+input RegisterUserInput {
+  name: String!
+  password: String!
+  email: String!
+}
+
+input UpdateUserInput {
+  name: String!
+  email: String!
   privilege: String!
-  active: Boolean!
 }
 
 type Mutation {
   createUser(input: CreateUserInput): User!
+  register(input: RegisterUserInput): User!
+  updateUser(id: String!, input: UpdateUserInput): User!
 }

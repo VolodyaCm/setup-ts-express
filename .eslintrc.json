@@ -15,7 +15,9 @@
           ["@/config", "./src/config"],
           ["@/gql", "./src/graphql"],
           ["@/gql/types", "./src/graphql/types"],
-          ["@/gql/resolvers", "./src/graphql/resolvers"]
+          ["@/gql/resolvers", "./src/graphql/resolvers"],
+          ["@/db", "./src/db"],
+          ["@/lib", "./src/lib"]
         ]
       }
     }
